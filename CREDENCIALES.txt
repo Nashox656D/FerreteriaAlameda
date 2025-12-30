@@ -1,0 +1,154 @@
+================================================================
+CREDENCIALES DE ACCESO - TiCaShop LATAM ERP
+================================================================
+
+USUARIO: admin
+CONTRASEÑA: admin123
+
+PERFIL: Superusuario (Acceso completo a todos los módulos)
+
+================================================================
+INSTALACIÓN EN XAMPP - PASO A PASO
+================================================================
+
+REQUISITOS PREVIOS:
+------------------
+✓ XAMPP instalado (con MySQL activo)
+✓ Python 3.8 o superior instalado
+✓ Node.js 14 o superior instalado
+
+================================================================
+PASO 1: CONFIGURAR LA BASE DE DATOS EN XAMPP
+================================================================
+
+1. Abre XAMPP Control Panel
+2. Inicia el servicio MySQL (botón "Start")
+3. Haz clic en "Admin" de MySQL para abrir phpMyAdmin
+4. Crea una nueva base de datos:
+   - Nombre: ticashop_db
+   - Cotejamiento: utf8mb4_general_ci
+   - Clic en "Crear"
+
+================================================================
+PASO 2: CONFIGURAR Y EJECUTAR EL BACKEND
+================================================================
+
+1. Abre una terminal (CMD o Git Bash)
+
+2. Navega a la carpeta del backend:
+   cd ruta/donde/extrajiste/backend
+
+3. Instala las dependencias de Python:
+   pip install -r requirements.txt
+
+4. Ejecuta las migraciones de la base de datos:
+   python manage.py migrate
+
+5. Crea el superusuario (ya está creado con estos datos):
+   Usuario: admin
+   Contraseña: admin123
+   
+   (Si quieres crear otro usuario ejecuta: python manage.py createsuperuser)
+
+6. Inicia el servidor Django:
+   python manage.py runserver
+
+   Deberías ver:
+   "Starting development server at http://127.0.0.1:8000/"
+
+   ✓ DEJA ESTA TERMINAL ABIERTA
+
+================================================================
+PASO 3: CONFIGURAR Y EJECUTAR EL FRONTEND
+================================================================
+
+1. Abre OTRA terminal nueva (CMD o Git Bash)
+
+2. Navega a la carpeta del frontend:
+   cd ruta/donde/extrajiste/frontend
+
+3. Instala las dependencias de Node:
+   npm install
+
+   (Esto puede tardar unos minutos)
+
+4. Inicia el servidor de desarrollo de React:
+   npm start
+
+   El navegador se abrirá automáticamente en:
+   http://localhost:5000
+
+   ✓ DEJA ESTA TERMINAL ABIERTA
+
+================================================================
+PASO 4: ACCEDER A LA APLICACIÓN
+================================================================
+
+1. Abre tu navegador en: http://localhost:5000
+
+2. Usa las credenciales:
+   Usuario: admin
+   Contraseña: admin123
+
+3. ¡Listo! Ya puedes usar el sistema completo
+
+================================================================
+RESUMEN VISUAL DE LA INSTALACIÓN
+================================================================
+
+XAMPP (MySQL corriendo en puerto 3306)
+    ↓
+Terminal 1: Backend Django (puerto 8000)
+    ↓
+Terminal 2: Frontend React (puerto 5000)
+    ↓
+Navegador: http://localhost:5000
+
+================================================================
+MÓDULOS DISPONIBLES
+================================================================
+
+Una vez dentro tendrás acceso a:
+
+✓ Productos - Gestión del catálogo
+✓ Stock - Control de inventario
+✓ Clientes - Gestión de clientes
+✓ Cotizaciones - Crear cotizaciones
+✓ Proveedores - Gestión de proveedores
+✓ Órdenes de Compra - Pedidos a proveedores
+✓ Compras Internacionales - Con cálculo de IVA (NUEVO)
+✓ Facturas - Gestión de facturación
+✓ Empleados - Recursos humanos
+✓ Vacaciones - Control de ausencias
+✓ Tickets - Soporte técnico
+
+================================================================
+SOLUCIÓN DE PROBLEMAS COMUNES
+================================================================
+
+❌ Error: "Access denied for user"
+   Solución: Verifica que MySQL esté corriendo en XAMPP
+
+❌ Error: "Port 8000 is already in use"
+   Solución: Cierra otras aplicaciones que usen el puerto 8000
+
+❌ Error: "Module not found"
+   Solución: Ejecuta nuevamente: pip install -r requirements.txt
+
+❌ Error: "npm ERR!"
+   Solución: Borra la carpeta node_modules y ejecuta npm install de nuevo
+
+❌ La página no carga o sale "Connection refused"
+   Solución: Verifica que ambos servidores estén corriendo
+
+================================================================
+DETENER LA APLICACIÓN
+================================================================
+
+Para detener los servidores:
+- Presiona CTRL + C en cada terminal (backend y frontend)
+
+Para detener MySQL:
+- Ve a XAMPP Control Panel y haz clic en "Stop" en MySQL
+
+================================================================

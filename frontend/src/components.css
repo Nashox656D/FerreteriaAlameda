@@ -1,0 +1,360 @@
+/* Component-Specific Styles */
+
+/* Login Component */
+.login-container {
+  background: linear-gradient(135deg, #f3f0ff 0%, #faf5ff 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Page Sections */
+.page-section {
+  animation: fadeIn 0.3s ease;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #f3e8ff;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+/* Form Sections */
+.form-section {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  border-left: 4px solid #a855f7;
+}
+
+.form-section h3 {
+  color: #a855f7;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Data Tables Enhanced */
+.table-container {
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(168, 85, 247, 0.1);
+}
+
+.table-container table {
+  width: 100%;
+}
+
+table.striped tbody tr:nth-child(odd) {
+  background-color: #faf8ff;
+}
+
+table.striped tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Action Buttons in Tables */
+.table-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.action-btn.edit {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.action-btn.edit:hover {
+  background-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+.action-btn.delete {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.action-btn.delete:hover {
+  background-color: #fecaca;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(153, 27, 27, 0.2);
+}
+
+.action-btn.view {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.action-btn.view:hover {
+  background-color: #a7f3d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(6, 95, 70, 0.2);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: #6b7280;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.empty-state-text {
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
+
+/* Success/Error Messages */
+.alert {
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border-left: 4px solid;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-success {
+  background-color: #d1fae5;
+  border-color: #10b981;
+  color: #065f46;
+}
+
+.alert-error {
+  background-color: #fee2e2;
+  border-color: #ef4444;
+  color: #7f1d1d;
+}
+
+.alert-warning {
+  background-color: #fef3c7;
+  border-color: #f59e0b;
+  color: #78350f;
+}
+
+.alert-info {
+  background-color: #dbeafe;
+  border-color: #3b82f6;
+  color: #1e40af;
+}
+
+/* Modal/Dialog Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15);
+  max-width: 500px;
+  width: 90%;
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Badges with Colors */
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 8px;
+  background-color: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a855f7 0%, #d946ef 100%);
+  transition: width 0.4s ease;
+  border-radius: 4px;
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.breadcrumb a {
+  color: #a855f7;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #d946ef;
+}
+
+.breadcrumb-separator {
+  color: #d1d5db;
+}
+
+/* Cards Grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card-item {
+  background: white;
+  border: 1px solid #f3e8ff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(168, 85, 247, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-item:hover {
+  border-color: #d8b4fe;
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.15);
+  transform: translateY(-4px);
+}
+
+.card-item-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.card-item-subtitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.card-item-content {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid #f3e8ff;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #6b7280;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #a855f7;
+}
+
+.tab-button.active {
+  color: #a855f7;
+  border-bottom-color: #a855f7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
